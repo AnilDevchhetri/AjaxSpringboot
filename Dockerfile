@@ -9,4 +9,4 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17.0.1-jdk-slim
 COPY --from=build /target/ajax-0.0.1-SNAPSHOT.jar ajax.jar
 EXPOSE 8080
-ENTRYPOINT["java","jar","ajax.jar"]
+ENTRYPOINT["java","-jar","ajax.jar"]
